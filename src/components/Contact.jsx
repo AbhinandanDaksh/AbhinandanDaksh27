@@ -1,8 +1,15 @@
 import React from 'react'
+import { motion } from "framer-motion";
+
 
 const Contact = () => {
   return (
-    <div name="Contact" className='lg:p-0 p-[10%]'>
+    <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+    viewport={{ once: true }}
+    name="Contact" className='lg:p-0 p-[10%]'>
         <section
     //   id="contact"
     //   ref={revealContainer}
@@ -27,7 +34,7 @@ const Contact = () => {
             </a>
           </button>
     </section>
-    </div>
+    </motion.div>
   )
 }
 

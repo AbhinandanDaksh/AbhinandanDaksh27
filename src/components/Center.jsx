@@ -1,8 +1,21 @@
 import React from 'react';
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 
 const Center = () => {
+  const { ref, inView } = useInView({ triggerOnce: true });
+
   return (
-    <div name="Center" className="h-screen w-[100%] m-[auto] flex justify-start py-48 px-[17%]">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{
+        duration: 1.8, // Slightly longer duration for smoother effect
+        ease: [0.25, 0.8, 0.25, 1], // Custom easing for smoothness
+        delay: 0.2, // Slight delay for smoother trigger
+      }} name="Center" className="h-screen w-[100%] m-[auto] flex justify-start py-48 px-[17%]">
       <div className="space-y-2 md:space-y-4">
         {/* Introduction Text */}
         <p className="text-[#64ffda] font-mono text-sm md:text-lg font-normal">
@@ -38,7 +51,7 @@ const Center = () => {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

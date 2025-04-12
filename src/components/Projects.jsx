@@ -6,6 +6,8 @@ import Connectify from "../Images/Connectify.png";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
 
 // Project data array
 
@@ -26,10 +28,22 @@ const Projects = () => {
             {/* Description Section */}
 
             {/* Project 01 */}
-            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-20  pb-40 sm:pb-10  md:pb-10 lg:pb-10 relative">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="flex flex-col lg:flex-row items-center gap-8 lg:gap-20 pb-48 sm:pb-10 md:pb-10 lg:pb-10 relative"
+            >
+
               {/* Image Section */}
-              <div className="relative">
-                <div className="relative group w-[85%] lg:w-[700px] mx-auto">
+              <div
+                className="relative">
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  transition={{ duration: 0.3 }}
+                  className="relative group w-[85%] lg:w-[700px] mx-auto"
+                >
                   {/* Border Box */}
                   <div className="absolute top-4 -left-6 hidden lg:block w-full h-[380px] border-2 border-[#64ffda] transition-transform duration-300 ease-in-out group-hover:-translate-x-2 group-hover:translate-y-2"></div>
                   {/* Image */}
@@ -40,7 +54,7 @@ const Projects = () => {
                   />
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-[#64ffda] opacity-100 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-300"></div>
-                </div>
+                </motion.div>
               </div>
 
               {/* Text Section */}
@@ -90,12 +104,19 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
             {/* Project 02*/}
-            <div className="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-12 pb-40 sm:pb-10  md:pb-10 lg:pb-10 relative">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }} className="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-12 pb-56 sm:pb-10  md:pb-10 lg:pb-10 relative">
               {/* Image Section */}
               <div className="relative">
-                <div className="relative group w-[85%] lg:w-[700px] mx-auto ">
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  transition={{ duration: 0.3 }}
+                  className="relative group w-[85%] lg:w-[700px] mx-auto ">
                   {/* Border Box */}
                   <div className="absolute  top-4 left-6 hidden lg:block w-full h-[380px] border-2 border-[#64ffda] transition-transform duration-300 ease-in-out group-hover:translate-x-2 group-hover:translate-y-2"></div>
                   {/* Image */}
@@ -106,7 +127,7 @@ const Projects = () => {
                   />
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-[#64ffda] opacity-100 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-300"></div>
-                </div>
+                </motion.div>
               </div>
 
               {/* Text Section */}
@@ -145,12 +166,20 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
             {/* Project 03 */}
-            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-20  pb-40 sm:pb-10  md:pb-10 lg:pb-10 relative">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="flex flex-col lg:flex-row items-center gap-8 lg:gap-20  pb-40 sm:pb-10  md:pb-10 lg:pb-10 relative">
               {/* Image Section */}
               <div className="relative">
-                <div className="relative group w-[85%] lg:w-[700px] mx-auto">
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  transition={{ duration: 0.3 }}
+                  className="relative group w-[85%] lg:w-[700px] mx-auto">
                   {/* Border Box */}
                   <div className="absolute top-4 -left-6 hidden lg:block w-full h-[380px] border-2 border-[#64ffda] transition-transform duration-300 ease-in-out group-hover:-translate-x-2 group-hover:translate-y-2"></div>
                   {/* Image */}
@@ -161,7 +190,7 @@ const Projects = () => {
                   />
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-[#64ffda] opacity-100 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-300"></div>
-                </div>
+                </motion.div>
               </div>
 
               {/* Text Section */}
@@ -200,12 +229,20 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
             {/* Project 04 */}
-            <div className="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-12 pb-40 sm:pb-10  md:pb-10 lg:pb-10 relative">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-12 pb-56 sm:pb-10  md:pb-10 lg:pb-10 relative">
               {/* Image Section */}
               <div className="relative">
-                <div className="relative group w-[85%] lg:w-[700px] mx-auto ">
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  transition={{ duration: 0.3 }}
+                  className="relative group w-[85%] lg:w-[700px] mx-auto ">
                   {/* Border Box */}
                   <div className="absolute  top-4 left-6 hidden lg:block w-full h-[380px] border-2 border-[#64ffda] transition-transform duration-300 ease-in-out group-hover:translate-x-2 group-hover:translate-y-2"></div>
                   {/* Image */}
@@ -216,7 +253,7 @@ const Projects = () => {
                   />
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-[#64ffda] opacity-100 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-300"></div>
-                </div>
+                </motion.div>
               </div>
 
               {/* Text Section */}
@@ -234,8 +271,10 @@ const Projects = () => {
                     <h1 className="text-3xl font-semibold text-[#ccd6f6] hover:text-[#64ffda] mt-4">
                       Jas Store
                     </h1>
-                    <div className="h-auto bg-[#112240] mt-6 shadow-md lg:shadow-[#020d1eb2]">
-                      <p className='text-[#8892b0] p-6 '><span className='text-[#64ffda]'>Jas store</span> is a dynamic e-commerce platform built with modern web technologies, featuring intuitive navigation, secure payment processing, and responsive design to deliver an exceptional shopping experience. <span className='text-[#64ffda]'>MERN stack</span>, offering interactive <span className='text-[#64ffda]'>coding tutorials</span>, <span className='text-[#64ffda]'>progress tracking</span>, and a <span className='text-[#64ffda]'>user-friendly</span> interface to enhance learning experiences.</p>
+                    <div className="h-auto bg-[#112240] mt-6  shadow-md lg:shadow-[#020d1eb2]">
+                      <p className='text-[#8892b0] p-6'>
+                        <span className='text-[#64ffda]'>Jas Store</span> is an e-commerce platform built with modern web technologies, offering secure payment processing, intuitive navigation, and responsive design. Built with the <span className='text-[#64ffda]'>MERN stack</span>, it features interactive <span className='text-[#64ffda]'>coding tutorials</span>, <span className='text-[#64ffda]'>progress tracking</span>, and a <span className='text-[#64ffda]'>user-friendly</span> interface to enhance learning.
+                      </p>
 
                     </div>
                     <div className=" text-[#8892b0] gap-4 flex lg:justify-start justify-center whitespace-break-spaces">
@@ -255,7 +294,7 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

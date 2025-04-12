@@ -1,15 +1,29 @@
 import React from 'react';
 import Logo from "../Images/IMG_20241020_112530.jpg";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const About = () => {
+    const { ref, inView } = useInView({ triggerOnce: true });
+
     return (
         <div name="About" className="h-auto bg-[#0a192f] flex items-center justify-center px-[10%] pb-20 pt-10 md:py-16 lg:py-24 xl:pb-36">
-            <div className="container mx-auto px-4 lg:px-16 xl:px-20">
+            <motion.div
+                ref={ref}
+                initial={{ opacity: 0, y: 50 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{
+                    duration: 1.8, // Slightly longer duration for smoother effect
+                    ease: [0.25, 0.8, 0.25, 1], // Custom easing for smoothness
+                    delay: 0.2, // Slight delay for smoother trigger
+                }}
+                className="container mx-auto px-4 lg:px-16 xl:px-20"
+            >
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10">
                     {/* Left Section - Text */}
                     <div className="flex-1 text-[#ccd6f6] space-y-6">
                         {/* Header */}
-                        <div className="flex items-center  font-mono text-xl md:text-2xl font-bold">
+                        <div className="flex items-center font-mono text-xl md:text-2xl font-bold">
                             <span className='text-[#64ffda]'>01.</span>
                             <h1 className="ml-2 text-2xl md:text-3xl lg:text-4xl">About Me</h1>
                             <div className="flex-grow h-[1px] bg-[#233554] ml-4"></div>
@@ -45,7 +59,16 @@ const About = () => {
                     </div>
 
                     {/* Right Section - Image */}
-                    <div className="flex justify-center items-center my-10">
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={inView ? { opacity: 1, x: 0 } : {}}
+                        transition={{
+                            duration: 1.8,
+                            ease: [0.25, 0.8, 0.25, 1],
+                            delay: 0.4, // Delay for smoother transition on image
+                        }}
+                        className="flex justify-center items-center my-10"
+                    >
                         <div
                             className="relative group w-[250px] sm:w-[275px] md:w-[300px] lg:w-[350px] h-[300px] sm:h-[325px] md:h-[350px] lg:h-[400px]"
                             tabIndex="0"
@@ -61,10 +84,9 @@ const About = () => {
                                 <div className="absolute inset-0 bg-[#64ffda] opacity-80 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-300"></div>
                             </div>
                         </div>
-                    </div>
-
+                    </motion.div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 };
