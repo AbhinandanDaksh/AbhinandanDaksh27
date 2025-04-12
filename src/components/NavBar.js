@@ -113,7 +113,7 @@ const NavBar = () => {
               <button className="w-24 h-9 bg-transparent rounded border-2 border-[#64ffda] text-[#64ffda] hover:bg-[#64ffda] hover:text-[#0a192f] transition-all">
                 {/* Resume */}
                 <a
-                  href="https://drive.google.com/file/d/1a50uTbgP-bhs1aZqBi1zGbQqta-E6GS8/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1_O_hJ0qaUDo5c4y1a11CeqTDurH3JDjg/view?usp=sharing"
                   download="Abhinandan_Resume.pdf"
                 >
                   Resume
