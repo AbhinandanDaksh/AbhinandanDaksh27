@@ -26,7 +26,7 @@ const Projects = () => {
             className="flex-1 text-[#ccd6f6] space-y-20 relative">
             {/* Heading */}
             <div className="flex items-center font-mono text-xl md:text-2xl font-bold">
-              <span className="text-[#64ffda]">03.</span>
+              <span className="text-[#64ffda]">04.</span>
               <h1 className="ml-2 text-xl md:text-3xl lg:text-4xl ">
                 {/* <span className="text-[#64ffda]">03.</span> */}
                 Academic Background & Milestones

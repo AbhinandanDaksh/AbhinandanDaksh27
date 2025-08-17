@@ -19,7 +19,7 @@ const Projects = () => {
           <div className="flex-1 text-[#ccd6f6] space-y-20 relative">
             {/* Heading */}
             <div className="flex items-center font-mono text-xl md:text-2xl font-bold">
-              <span className="text-[#64ffda]">02.</span>
+              <span className="text-[#64ffda]">03.</span>
               <h1 className="ml-2 text-xl md:text-3xl lg:text-4xl whitespace-nowrap">
                 Some Things I’ve Built
               </h1>

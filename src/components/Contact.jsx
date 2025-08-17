@@ -16,7 +16,7 @@ const Contact = () => {
       className="max-w-[40rem] mx-auto mb-24 text-center sm:mb-12"
     >
       <h2 className=" font-mono text-lg font-normal mb-5 text-[#64ffda]">
-        <span className="">04. What’s Next?</span>
+        <span className="">05. What’s Next?</span>
       </h2>
 
       <h2 className="text-4xl sm:text-5xl font-bold text-[#ccd6f6]  line-clamp-3">

@@ -53,6 +53,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import logo from "../src/Images/code(1).png";
+import Experience from "./components/Experience";
 
 function App() {
   const [loadingStage, setLoadingStage] = useState(1); // 1 = first loader, 2 = second loader, 3 = main content
@@ -109,6 +110,7 @@ function App() {
         <div className="flex-grow">
           <Center />
           <About />
+          <Experience/>
           <Projects />
           <Education />
           <Contact />
