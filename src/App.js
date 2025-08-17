@@ -41,6 +41,9 @@
 // }
 
 // export default App;
+
+
+
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import SideView from "./components/SideViewLeft";
@@ -99,29 +102,30 @@ function App() {
 
   // Main content after loading
   return (
-    <div className="w-auto bg-[#0a192f]">
-      <div className="relative">
-        <NavBar />
+  <div className="w-auto bg-[#0a192f] overflow-x-hidden overflow-y-auto">
+    <div className="relative">
+      <NavBar />
+    </div>
+    <div className="flex flex-row">
+      <div className="fixed top-[90px] left-0 h-screen w-[8%]">
+        <SideView />
       </div>
-      <div className="flex flex-row">
-        <div className="fixed top-[90px] left-0 h-screen w-[8%]">
-          <SideView />
-        </div>
-        <div className="flex-grow">
-          <Center />
-          <About />
-          <Experience/>
-          <Projects />
-          <Education />
-          <Contact />
-          <Footer />
-        </div>
-        <div className="fixed top-[90px] right-0 h-screen w-[8%]">
-          <SideViewRight />
-        </div>
+      <div className="flex-grow">
+        <Center />
+        <About />
+        <Experience />
+        <Projects />
+        <Education />
+        <Contact />
+        <Footer />
+      </div>
+      <div className="fixed top-[90px] right-0 h-screen w-[8%]">
+        <SideViewRight />
       </div>
     </div>
-  );
+  </div>
+);
+
 }
 
 export default App;
