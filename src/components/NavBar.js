@@ -210,7 +210,7 @@ const NavBar = () => {
             {/* Resume Button */}
             <li className="my-3 md:my-0">
               <a
-                href="https://drive.google.com/file/d/1-3jJMWRSabhvxKFKrZQYUfGogA_CXbPC/view?usp=sharing"
+                href="https://drive.google.com/file/d/1qea44OXPxvXpiLVDmuvszuOAfqX44Nk-/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block w-28 h-9 flex items-center justify-center rounded-md border-2 border-[#64ffda] text-[#64ffda] hover:bg-[#64ffda] hover:text-[#0a192f] hover:shadow-md transition-all duration-300"
