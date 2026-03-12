@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Icon } from '../icons';
 import { socialMedia } from '../config/config';
-import { IoStarOutline } from 'react-icons/io5';
-import { GoRepoForked } from 'react-icons/go';
+// import { IoStarOutline } from 'react-icons/io5';
+// import { GoRepoForked } from 'react-icons/go';
 
 const Footer = () => {
   // const [githubInfo, setGitHubInfo] = useState({

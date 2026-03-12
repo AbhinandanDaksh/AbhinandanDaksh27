@@ -1,14 +1,14 @@
 import React from "react";
-import image from "../Images/VediCode.png";
-import jas from "../Images/jas.png";
-import weatherApp from "../Images/weatherApp.png";
-import Connectify from "../Images/Connectify.png";
-import { FaExternalLinkAlt } from "react-icons/fa";
+// import image from "../Images/VediCode.png";
+// import jas from "../Images/jas.png";
+// import weatherApp from "../Images/weatherApp.png";
+// import Connectify from "../Images/Connectify.png";
+// import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaAws } from "react-icons/fa";
 import { LiaSalesforce } from "react-icons/lia";
 import { PiCertificate } from "react-icons/pi";
-import { FiGithub } from "react-icons/fi";
-import { Link } from "react-router-dom";
+// import { FiGithub } from "react-icons/fi";
+// import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 // Project data array
