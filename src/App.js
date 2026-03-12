@@ -55,6 +55,7 @@ import Education from "./components/Education";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
+import ScrollProgress from "./components/ScrollProgress";
 import logo from "../src/Images/code(1).png";
 import Experience from "./components/Experience";
 
@@ -78,11 +79,10 @@ function App() {
 
   if (loadingStage === 1) {
     return (
-      <div className="h-screen w-screen flex flex-col items-center justify-center bg-[#0a192f] text-white">
-      <img src={logo} className="w-20 h-20 animate-pulse" alt="logo" />
-      <p className="mt-4 text-lg typing-text">Loading your experience...</p>
-    </div>
-    
+      <div className="h-screen w-screen flex flex-col items-center justify-center bg-[var(--bg-primary)] text-[var(--text-primary)]">
+        <img src={logo} className="w-20 h-20 animate-pulse" alt="logo" />
+        <p className="mt-4 text-lg typing-text">Loading your experience...</p>
+      </div>
     );
   }
 
@@ -102,7 +102,8 @@ function App() {
 
   // Main content after loading
   return (
-  <div className="w-auto bg-[#0a192f] overflow-x-hidden overflow-y-auto">
+  <div className="w-auto bg-[var(--bg-primary)] overflow-x-hidden overflow-y-auto transition-colors duration-300">
+    <ScrollProgress />
     <div className="relative">
       <NavBar />
     </div>

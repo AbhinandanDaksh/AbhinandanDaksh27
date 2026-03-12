@@ -7,7 +7,7 @@ const About = () => {
     const { ref, inView } = useInView({ triggerOnce: true });
 
     return (
-        <div name="About" className="h-auto bg-[#0a192f] flex items-center justify-center px-[10%] pb-20 pt-10 md:py-16 lg:py-24 xl:pb-36">
+        <div name="About" className="h-auto bg-[var(--bg-primary)] flex items-center justify-center px-[10%] pb-20 pt-10 md:py-16 lg:py-24 xl:pb-36 transition-colors duration-300">
             <motion.div
                 ref={ref}
                 initial={{ opacity: 0, y: 50 }}
@@ -21,22 +21,27 @@ const About = () => {
             >
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10">
                     {/* Left Section - Text */}
-                    <div className="flex-1 text-[#ccd6f6] space-y-6">
+                    <div className="flex-1 text-[var(--text-primary)] space-y-6">
                         {/* Header */}
                         <div className="flex items-center font-mono text-xl md:text-2xl font-bold">
-                            <span className='text-[#64ffda]'>01.</span>
+                            <span className='text-[var(--accent)]'>01.</span>
                             <h1 className="ml-2 text-2xl md:text-3xl lg:text-4xl">About Me</h1>
-                            <div className="flex-grow h-[1px] bg-[#233554] ml-4"></div>
+                            <div className="flex-grow h-[1px] bg-[var(--border)] ml-4"></div>
                         </div>
 
                         {/* Introduction */}
-                        <div className="text-[15px] md:text-[17px] leading-relaxed text-[#8892b0]">
+                        <div className="text-[15px] md:text-[17px] leading-relaxed text-[var(--text-muted)]">
                             <p>
-                                Hey there! I'm <span className="text-[#64ffda]">Abhinandan Daksh</span>, a curious and creative Full Stack Developer specializing in the MERN stack. I’m all about blending technology with innovation, crafting web applications that not only function seamlessly but are a joy to use. Whether it's diving into backend logic with <span className="text-[#64ffda]">Node.js</span> or designing user-centric interfaces with <span className="text-[#64ffda]">React.js</span>, I thrive on solving complex problems with simple, elegant solutions.
+                                Hey there! I'm <span className="text-[var(--accent)]">Abhinandan Daksh</span>, a curious and creative Full Stack Developer specializing in the MERN stack. I’m all about blending technology with innovation, crafting web applications that not only function seamlessly but are a joy to use. Whether it's diving into backend logic with <span className="text-[var(--accent)]">Node.js</span> or designing user-centric interfaces with <span className="text-[var(--accent)]">React.js</span>, I thrive on solving complex problems with simple, elegant solutions.
                             </p>
                             <p className="mt-4">
-                                I believe in constant learning and pushing boundaries, whether it’s exploring new <span className="text-[#64ffda]">frameworks</span> or <span className="text-[#64ffda]">optimizing</span> existing systems. Outside of code, I’m passionate about exploring the intersection of technology and design, always seeking out new ways to enhance the digital experience.
+                                I believe in constant learning and pushing boundaries, whether it’s exploring new <span className="text-[var(--accent)]">frameworks</span> or <span className="text-[var(--accent)]">optimizing</span> existing systems. Outside of code, I’m passionate about exploring the intersection of technology and design, always seeking out new ways to enhance the digital experience.
                             </p>
+                            {/* Currently learning & Looking for */}
+                            <div className="mt-6 p-4 rounded-lg bg-[var(--bg-secondary)] border border-[var(--border)] space-y-2">
+                                <p><span className="text-[var(--accent)] font-medium">Currently learning:</span> System design, cloud (AWS), and advanced React patterns.</p>
+                                <p><span className="text-[var(--accent)] font-medium">Looking for:</span> Full-time opportunities as a Full Stack / MERN developer where I can build impactful products and grow with the team.</p>
+                            </div>
                             {/* Skills */}
                             <p className="mt-6">
                                 Here are a few technologies I’ve been working with recently:
@@ -73,7 +78,7 @@ const About = () => {
                             className="relative group w-[250px] sm:w-[275px] md:w-[300px] lg:w-[350px] h-[300px] sm:h-[325px] md:h-[350px] lg:h-[400px]"
                             tabIndex="0"
                         >
-                            <div className="absolute top-4 left-4 w-full h-full border-2 rounded-sm border-[#64ffda] transition-transform duration-300 ease-in-out group-hover:translate-x-2 group-hover:translate-y-2"></div>
+                            <div className="absolute top-4 left-4 w-full h-full border-2 rounded-sm border-[var(--accent)] transition-transform duration-300 ease-in-out group-hover:translate-x-2 group-hover:translate-y-2"></div>
                             <div className="relative">
                                 <img
                                     src={Logo}
@@ -81,7 +86,7 @@ const About = () => {
                                     loading="lazy"
                                     className="w-full h-full object-cover rounded-sm transition-transform duration-300 ease-in-out group-hover:-translate-x-2 group-hover:-translate-y-2"
                                 />
-                                <div className="absolute inset-0 bg-[#64ffda] opacity-80 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-300"></div>
+                                <div className="absolute inset-0 bg-[var(--accent)] opacity-80 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-300"></div>
                             </div>
                         </div>
                     </motion.div>

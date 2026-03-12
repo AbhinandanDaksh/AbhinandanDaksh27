@@ -13,7 +13,7 @@ const SideViewLeft = () => {
       ease: [0.25, 0.8, 0.25, 1],
       delay: 0.2,
     }}
-    className="hidden fixed bottom-0 left-12 md:flex lg:flex flex-col items-center text-[#a8b2d1] bg-transparent">
+    className="hidden fixed bottom-0 left-12 md:flex lg:flex flex-col items-center text-[var(--text-muted-2)] bg-transparent">
       {/* Social Media Icons */}
       <div className="flex flex-col items-center mb-4">
         {socialMedia.map(({ url, name }, index) => (
@@ -23,7 +23,7 @@ const SideViewLeft = () => {
             aria-label={name}
             target="_blank"
             rel="noreferrer"
-            className="h-6 w-6 mb-12 flex items-center justify-center hover:-translate-y-[2px] duration-300 hover:text-[#64ffda] transition-all"
+            className="h-6 w-6 mb-12 flex items-center justify-center hover:-translate-y-[2px] duration-300 hover:text-[var(--accent)] transition-all"
           >
             <Icon name={name} />
           </a>
@@ -31,7 +31,7 @@ const SideViewLeft = () => {
       </div>
 
       {/* Vertical Line */}
-      <div className="w-[2px] h-[90px] bg-[#a8b2d1]"></div>
+      <div className="w-[2px] h-[90px] bg-[var(--text-muted-2)]"></div>
     </motion.div>
   );
 };

@@ -15,7 +15,7 @@ import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
-    <div name="Education" className="h-auto bg-[#0a192f] flex items-center justify-center px-4 md:px-[10%] pb-20 pt-10 md:pb-20 lg:pb-28 xl:pb-36">
+    <div name="Education" className="h-auto bg-[var(--bg-primary)] flex items-center justify-center px-4 md:px-[10%] pb-20 pt-10 md:pb-20 lg:pb-28 xl:pb-36">
       <div className="container mx-auto px-4 lg:px-16 xl:px-24">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-12">
           <motion.div
@@ -23,15 +23,15 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="flex-1 text-[#ccd6f6] space-y-20 relative">
+            className="flex-1 text-[var(--text-primary)] space-y-20 relative">
             {/* Heading */}
             <div className="flex items-center font-mono text-xl md:text-2xl font-bold">
-              <span className="text-[#64ffda]">04.</span>
+              <span className="text-[var(--accent)]">04.</span>
               <h1 className="ml-2 text-xl md:text-3xl lg:text-4xl ">
-                {/* <span className="text-[#64ffda]">03.</span> */}
+                {/* <span className="text-[var(--accent)]">03.</span> */}
                 Academic Background & Milestones
               </h1>
-              <div className="flex-grow h-[1px] bg-[#233554] ml-4"></div>
+              <div className="flex-grow h-[1px] bg-[var(--border)] ml-4"></div>
             </div>
             {/* Description Section */}
             <div>
@@ -60,10 +60,10 @@ const Projects = () => {
                     transition={{ duration: 0.6, delay: i * 0.2 }}
                     viewport={{ once: true }}
                   >
-                    <h2 className="text-2xl font-semibold text-[#ccd6f6] hover:text-[#64ffda]">
+                    <h2 className="text-2xl font-semibold text-[var(--text-primary)] hover:text-[var(--accent)]">
                       {item.title}
                     </h2>
-                    <p className="text-[15px] md:text-[17px] leading-relaxed text-[#8892b0]">
+                    <p className="text-[15px] md:text-[17px] leading-relaxed text-[var(--text-muted)]">
                       {item.desc}
                     </p>
                   </motion.li>
@@ -76,10 +76,10 @@ const Projects = () => {
                   transition={{ duration: 0.8, delay: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  <h2 className="mt-20 text-2xl font-semibold text-[#ccd6f6] hover:text-[#64ffda]">
+                  <h2 className="mt-20 text-2xl font-semibold text-[var(--text-primary)] hover:text-[var(--accent)]">
                     Achievements & Awards
                   </h2>
-                  <ul className="space-y-2 text-[#8892b0] mt-4">
+                  <ul className="space-y-2 text-[var(--text-muted)] mt-4">
                     <li className="flex items-center space-x-2">
                       <a
                         href="https://www.credly.com/badges/a88660c9-c565-40e3-ba5d-f44e47e0b31f/public_url"

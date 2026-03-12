@@ -76,21 +76,21 @@ const Experience = () => {
   const { role, title, time, description,link } = activeExp;
 
   return (
-    <div name="Experience" className="h-auto flex items-center justify-center px-4 md:px-[10%] pb-20 pt-10 md:pb-20 lg:pb-28 xl:pb-36 text-[#ccd6f6]">
+    <div name="Experience" className="h-auto bg-[var(--bg-primary)] flex items-center justify-center transition-colors duration-300 px-4 md:px-[10%] pb-20 pt-10 md:pb-20 lg:pb-28 xl:pb-36 text-[var(--text-primary)]">
       <div className="w-full md:w-[60%] md:h-[60vh] h-auto">
         {/* Heading */}
         <div className="flex items-center font-mono text-xl md:text-2xl font-bold">
-          <span className="text-[#64ffda]">02.</span>
+          <span className="text-[var(--accent)]">02.</span>
           <h1 className="ml-2 text-xl md:text-3xl lg:text-4xl">
             Where I’ve Worked
           </h1>
-          <div className="flex-grow h-[1px] bg-[#233554] ml-4"></div>
+          <div className="flex-grow h-[1px] bg-[var(--border)] ml-4"></div>
         </div>
 
         {/* Content */}
         <div className="my-10 flex">
           <div
-            className="w-[30%] md:w-[20%] flex flex-col border-l border-[#233554] relative"
+            className="w-[30%] md:w-[20%] flex flex-col border-l border-[var(--border)] relative"
             role="tablist"
             aria-orientation="vertical"
           >
@@ -104,15 +104,15 @@ const Experience = () => {
                 className={`px-4 py-3 text-left font-mono text-sm md:text-base transition-all duration-300 border-l-2 relative overflow-hidden
         ${
           active === item.id
-            ? "text-[#64ffda] border-[#64ffda] bg-[#112240] font-semibold"
-            : "text-[#8892b0] border-transparent hover:text-[#64ffda] hover:bg-[#112240]/50"
+            ? "text-[var(--accent)] border-[var(--accent)] bg-[var(--bg-secondary)] font-semibold"
+            : "text-[var(--text-muted)] border-transparent hover:text-[var(--accent)] hover:bg-[var(--bg-secondary)]/50"
         }`}
               >
                 <span className="relative z-10">{item.title}</span>
                 {active === item.id && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute inset-0 bg-[#64ffda]/10 rounded-md"
+                    className="absolute inset-0 bg-[var(--accent)]/10 rounded-md"
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />
                 )}
@@ -129,7 +129,7 @@ const Experience = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -15 }}
                 transition={{ duration: 0.4 }}
-                className="bg-[#112240] p-5 rounded-lg shadow-md"
+                className="bg-[var(--bg-secondary)] p-5 rounded-lg shadow-md"
               >
                 <h2 className="group text-lg md:text-xl font-semibold inline-block">
                   {role}{" "}
@@ -137,24 +137,24 @@ const Experience = () => {
                     href={link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="relative text-[#64ffda] cursor-pointer transition"
+                    className="relative text-[var(--accent)] cursor-pointer transition"
                   >
                     @ {title}
-                    <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-[#64ffda] transition-all duration-300 group-hover:w-full"></span>
+                    <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-[var(--accent)] transition-all duration-300 group-hover:w-full"></span>
                   </a>
                 </h2>
 
-                <p className="text-sm text-[#8892b0] my-2">{time}</p>
+                <p className="text-sm text-[var(--text-muted)] my-2">{time}</p>
                 <ul className="space-y-3">
                   {description.map((desc, idx) => (
                     <motion.li
                       key={idx}
-                      className="flex items-start gap-2 text-[#8892b0] leading-relaxed"
+                      className="flex items-start gap-2 text-[var(--text-muted)] leading-relaxed"
                       initial={{ opacity: 0, x: 10 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: idx * 0.1 }}
                     >
-                      <span className="text-[#64ffda]">▹</span>
+                      <span className="text-[var(--accent)]">▹</span>
                       <span>{desc.point}</span>
                     </motion.li>
                   ))}

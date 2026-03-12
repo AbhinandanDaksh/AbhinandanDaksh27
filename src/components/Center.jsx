@@ -18,16 +18,16 @@ const Center = () => {
       }} name="Center" className="h-screen w-[100%] m-[auto] flex justify-start py-48 px-[17%]">
       <div className="space-y-2 md:space-y-4">
         {/* Introduction Text */}
-        <p className="text-[#64ffda] font-mono text-sm md:text-lg font-normal">
+        <p className="text-[var(--accent)] font-mono text-sm md:text-lg font-normal">
           Hi, my name is
         </p>
 
         {/* Main Heading */}
         <div className=' text-3xl sm:text-3xl md:text-5xl lg:text-7xl font-bold space-y-2 md:space-y-4 '>
-          <h1 className="text-[#ccd6f6]">
+          <h1 className="text-[var(--text-primary)]">
             Abhinandan Daksh.
           </h1>
-          <h1 className="text-[#8892b0] ">
+          <h1 className="text-[var(--text-muted)] ">
             I build things for the web.
           </h1>
 
@@ -35,7 +35,7 @@ const Center = () => {
 
 
         {/* Subtext */}
-        <p className="text-[#8892b0] text-sm sm:text-base md:text-lg leading-relaxed max-w-[570px]">
+        <p className="text-[var(--text-muted)] text-sm sm:text-base md:text-lg leading-relaxed max-w-[570px]">
           I’m a MERN stack developer dedicated to creating robust and engaging web applications.
           Using MongoDB, Express.js, React, and Node.js, I build end-to-end solutions that are both
           responsive and efficient. My focus is on delivering high-quality digital experiences with
@@ -44,7 +44,7 @@ const Center = () => {
 
         {/* Button */}
         <div>
-          <button className="mt-8 flex justify-center items-center h-10 bg-transparent rounded border-2 px-8 py-2 lg:px-14 lg:py-6 border-[#64ffda] text-[#64ffda] font-mono text-sm sm:text-base hover:translate-y-[-2px] duration-300 hover:bg-[#64ffda] transition-all hover:text-[#0a192f]">
+          <button className="mt-8 flex justify-center items-center h-10 bg-transparent rounded border-2 px-8 py-2 lg:px-14 lg:py-6 border-[var(--accent)] text-[var(--accent)] font-mono text-sm sm:text-base hover:translate-y-[-2px] duration-300 hover:bg-[var(--accent)] transition-all hover:text-[var(--bg-primary)]">
             <a href="mailto:Abhinandandaksh@gmail.com" aria-label="Hire me via email">
               Hire Me!
             </a>

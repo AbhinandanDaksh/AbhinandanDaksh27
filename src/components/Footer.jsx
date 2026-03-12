@@ -52,7 +52,7 @@ const Footer = () => {
         <ul className="flex justify-between list-none  ">
           {socialMedia &&
             socialMedia.map(({ name, url }, i) => (
-              <li key={i} className='text-[#a8b2d1] hover:-translate-y-[2px] duration-300 hover:text-[#64ffda] transition-all'>
+              <li key={i} className='text-[var(--text-muted-2)] hover:-translate-y-[2px] duration-300 hover:text-[var(--accent)] transition-all'>
                 <a
                   href={url}
                   aria-label={name}
@@ -67,10 +67,10 @@ const Footer = () => {
 
       {/* Credit Section */}
       <div
-        className="text-[#8892b0] font-mono text-lg leading-none focus:outline-none hover:text-[#64ffda] hover:-translate-y-[2px] duration-300"
+        className="text-[var(--text-muted)] font-mono text-lg leading-none focus:outline-none hover:text-[var(--accent)] hover:-translate-y-[2px] duration-300"
         tabIndex="-1"
       >
-        <a href="https://github.com/AbhinandanDaksh" className="inline-block p-2 mb-7 ">
+        <a href="https://github.com/AbhinandanDaksh" target="_blank" rel="noopener noreferrer" className="inline-block p-2 mb-7 ">
           <div>Designed &amp; Built by Abhinandan</div>
 
           {/* GitHub Stats */}
