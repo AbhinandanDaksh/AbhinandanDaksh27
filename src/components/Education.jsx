@@ -84,6 +84,7 @@ const Projects = () => {
                       <a
                         href="https://www.credly.com/badges/a88660c9-c565-40e3-ba5d-f44e47e0b31f/public_url"
                         target="_blank"
+                        rel="noreferrer"
                         className="flex items-center space-x-2"
                       >
                         <FaAws className="text-2xl cursor-pointer" />
@@ -96,6 +97,7 @@ const Projects = () => {
                       <a
                         href="https://www.salesforce.com/trailblazer/adaksh9"
                         target="_blank"
+                        rel="noreferrer"
                         className="flex items-center space-x-2"
                       >
                         <LiaSalesforce className="text-2xl cursor-pointer" />
@@ -106,6 +108,7 @@ const Projects = () => {
                       <a
                         href="https://drive.google.com/file/d/1pARYyIn7aJe6pgqqct7JT4rihES50FVL/view?usp=sharing"
                         target="_blank"
+                        rel="noreferrer"
                         className="flex items-center space-x-2"
                       >
                         <PiCertificate className="text-2xl cursor-pointer" />
