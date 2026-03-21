@@ -445,6 +445,7 @@ const Projects = () => {
               <span className="text-[var(--text-muted)] font-mono text-xs uppercase tracking-widest">
                 Project
               </span>
+              
               <div className="flex-1 h-px bg-[var(--border)]" />
             </div>
             {/* Project 05 */}
