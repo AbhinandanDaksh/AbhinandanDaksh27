@@ -35,21 +35,24 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="flex flex-col lg:flex-row items-center gap-8 lg:gap-20 pb-48 sm:pb-10 md:pb-10 lg:pb-10 relative"
+              className="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-12 pb-56 sm:pb-10 md:pb-10 lg:pb-10 relative"
             >
               {/* Image Section */}
               <div className="relative">
                 <motion.div
                   whileHover={{ scale: 1.03 }}
                   transition={{ duration: 0.3 }}
-                  className="relative group w-[85%] lg:w-[700px] mx-auto"
+                  className="relative group w-[85%] lg:w-[700px] mx-auto "
                 >
-                  <div className="absolute top-4 -left-6 hidden lg:block w-full h-[380px] border-2 border-[var(--accent)] transition-transform duration-300 ease-in-out group-hover:-translate-x-2 group-hover:translate-y-2"></div>
+                  {/* Border Box */}
+                  <div className="absolute  top-4 left-6 hidden lg:block w-full h-[380px] border-2 border-[var(--accent)] transition-transform duration-300 ease-in-out group-hover:translate-x-2 group-hover:translate-y-2"></div>
+                  {/* Image */}
                   <img
                     src={RitmicoImg}
                     alt="Ritmico"
-                    className="relative h-[250px] lg:h-[370px] w-full object-cover transition-transform duration-300 ease-in-out group-hover:translate-x-2 group-hover:-translate-y-2"
+                    className="relative h-[250px] lg:h-[370px] w-full object-cover transition-transform duration-300 ease-in-out group-hover:-translate-x-2 group-hover:-translate-y-2"
                   />
+                  {/* Overlay */}
                   <div className="absolute inset-0 bg-[var(--accent)] opacity-100 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-300"></div>
                 </motion.div>
               </div>
@@ -57,12 +60,13 @@ const Projects = () => {
               {/* Text Section */}
               <div
                 className={`
-                absolute max-w-[600px] lg:ml-[45%]
+                absolute max-w-[600px] lg:mr-[45%]
                 bg-[var(--bg-secondary)] lg:bg-transparent opacity-95 lg:opacity-100
                 text-center lg:text-right
+           
               `}
               >
-                <div className="flex relative lg:text-right text-center bg-[var(--bg-secondary)] lg:bg-transparent opacity-95 lg:opacity-100 mt-12">
+                <div className="flex relative lg:text-left text-center bg-[var(--bg-secondary)] lg:bg-transparent opacity-95 lg:opacity-100 mt-12">
                   <div className="flex flex-col px-6 lg:px-0">
                     <p className="text-[var(--accent)]">Featured Project</p>
                     <h1 className="text-3xl font-semibold text-[var(--text-primary)] hover:text-[var(--accent)] mt-4">
@@ -79,19 +83,23 @@ const Projects = () => {
                         interface to stay consistent and build better habits.
                       </p>
                     </div>
-                    <div className="flex flex-wrap gap-2 lg:justify-end justify-center mt-4">
-                      {["React.js", "Node.js", "Express.js", "MongoDB"].map(
-                        (tech) => (
-                          <span
-                            key={tech}
-                            className="text-[var(--text-muted)] text-xs font-mono border border-[var(--border)] px-2.5 py-1 rounded hover:border-[var(--accent)]/50 hover:text-[var(--accent)]/90 transition-colors"
-                          >
-                            {tech}
-                          </span>
-                        ),
-                      )}
+                    <div className="flex flex-wrap gap-2 lg:justify-start justify-center mt-4">
+                      {[
+                        "React.js",
+                        "Next.js",
+                        "Node.js",
+                        "Express.js",
+                        "MongoDB",
+                      ].map((tech) => (
+                        <span
+                          key={tech}
+                          className="text-[var(--text-muted)] text-xs font-mono border border-[var(--border)] px-2.5 py-1 rounded hover:border-[var(--accent)]/50 hover:text-[var(--accent)]/90 transition-colors"
+                        >
+                          {tech}
+                        </span>
+                      ))}
                     </div>
-                    <div className="text-[var(--text-muted)] gap-4 flex lg:justify-end justify-center items-center mt-4 mb-2">
+                    <div className="text-[var(--text-muted)] gap-4 flex lg:justify-start justify-center items-center mt-4 mb-2">
                       <a
                         href="https://github.com/AbhinandanDaksh"
                         target="_blank"
@@ -445,7 +453,7 @@ const Projects = () => {
               <span className="text-[var(--text-muted)] font-mono text-xs uppercase tracking-widest">
                 Project
               </span>
-              
+
               <div className="flex-1 h-px bg-[var(--border)]" />
             </div>
             {/* Project 05 */}
