@@ -223,7 +223,7 @@ const Projects = () => {
                         <FiGithub />
                       </a>
                       <a
-                        href="https://github.com/AbhinandanDaksh"
+                        href="https://vedicode-original.vercel.app/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-[var(--accent)] text-xl transition-colors"
