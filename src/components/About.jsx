@@ -25,7 +25,7 @@ const About = () => {
                         {/* Header */}
                         <div className="flex items-center font-mono text-xl md:text-2xl font-bold">
                             <span className='text-[var(--accent)]'>01.</span>
-                            <h1 className="ml-2 text-2xl md:text-3xl lg:text-4xl">About Me</h1>
+                            <h1 className="ml-2 text-2xl md:text-git3xl lg:text-4xl">About Me</h1>
                             <div className="flex-grow h-[1px] bg-[var(--border)] ml-4"></div>
                         </div>
 

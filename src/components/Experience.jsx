@@ -5,9 +5,26 @@ import { motion, AnimatePresence } from "framer-motion";
 const experiences = [
   {
     id: 1,
+    title: "Alobha Technologies",
+    role: "Full Stack Developer",
+    time: "May 2026 - Present",
+    link: "https://alobhatechnologies.com/",
+    description: [
+      {
+        point:
+          "Built and integrated secure REST APIs, optimized database queries, and implemented authentication and role-based access control, improving application performance and security.",
+      },
+      {
+        point:
+          "Collaborated with cross-functional teams to develop new features, fix production issues, and deploy applications using modern Git workflows and Agile practices.",
+      },
+    ],
+  },
+  {
+    id: 2,
     title: "JIT",
     role: "Full Stack Developer",
-    time: "December 2024 - Present",
+    time: "December 2024 - May 2026",
     link: "https://www.jewarinternational.com/",
     description: [
       {
@@ -25,7 +42,7 @@ const experiences = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "Innovixion Tech",
     role: "Full Stack Developer",
     time: "August 2024 - November 2024",
@@ -45,7 +62,7 @@ const experiences = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "ICT Academy",
     role: "Full Stack Developer (Internship)",
     time: "August 2023 - September 2023",
