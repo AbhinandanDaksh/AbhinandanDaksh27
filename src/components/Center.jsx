@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-// import { Link } from "react-scroll";
 import { FiSend, FiCode } from "react-icons/fi";
+
+// Dynamic Typewriter Roles (defined outside component to satisfy useEffect dependency rules)
+const roles = [
+  "I build things for the web.",
+  "MERN Stack Developer.",
+  "Full-Stack Web Architect.",
+  "Building Modern Web App.",
+  "Scalable & Responsive UI."
+];
 
 const Center = () => {
   const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.15 });
-
-  // Dynamic Typewriter Roles
-  const roles = [
-    "I build things for the web.",
-    "MERN Stack Developer.",
-    "Full-Stack Web Architect.",
-    "Building Modern Web App.",
-    "Scalable & Responsive UI."
-  ];
 
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
@@ -75,15 +74,6 @@ const Center = () => {
     },
   };
 
-  const techBadges = [
-    "React.js",
-    "Node.js",
-    "Express.js",
-    "MongoDB",
-    "Next.js",
-    "Tailwind CSS"
-  ];
-
   return (
     <section
       id="Center"
@@ -101,19 +91,6 @@ const Center = () => {
         animate={inView ? "visible" : "hidden"}
         className="space-y-5 md:space-y-6 max-w-4xl relative z-10"
       >
-        {/* Availability Badge */}
-        {/* <motion.div variants={itemVariants}>
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[var(--bg-secondary)] border border-[var(--border)] backdrop-blur-md shadow-sm">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--accent)] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[var(--accent)]"></span>
-            </span>
-            <span className="text-[var(--text-muted-2)] font-mono text-xs sm:text-sm">
-              Available for Full-time & Freelance Roles
-            </span>
-          </div>
-        </motion.div> */}
-
         {/* Introduction Text */}
         <motion.p
           variants={itemVariants}
@@ -152,23 +129,6 @@ const Center = () => {
           <span className="text-[var(--accent)] font-mono font-medium">MongoDB</span>, I turn ideas into clean, functional code.
         </motion.p>
 
-        {/* Quick Tech Stack Pills */}
-        {/* <motion.div variants={itemVariants} className="pt-2">
-          <p className="text-xs font-mono text-[var(--text-muted-2)] uppercase tracking-wider mb-2.5">
-            Core Tech Stack:
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {techBadges.map((tech, idx) => (
-              <span
-                key={idx}
-                className="px-3 py-1 rounded-md text-xs sm:text-sm font-mono bg-[var(--bg-secondary)] text-[var(--text-muted-2)] border border-[var(--border)] hover:border-[var(--accent)] hover:text-[var(--accent)] hover:-translate-y-0.5 transition-all duration-300 cursor-default"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-        </motion.div> */}
-
         {/* CTA Buttons */}
         <motion.div
           variants={itemVariants}
@@ -183,20 +143,6 @@ const Center = () => {
             <FiSend className="text-lg transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-0.5" />
             <span>Hire Me!</span>
           </a>
-           <div>
-        </div>
-
-          {/* View Projects Button */}
-          {/* <Link
-            to="Projects"
-            smooth={true}
-            duration={600}
-            offset={-60}
-            className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 rounded bg-[var(--bg-secondary)] border border-[var(--border)] text-[var(--text-primary)] font-mono text-sm sm:text-base font-medium hover:border-[var(--accent)] hover:text-[var(--accent)] transition-all duration-300 hover:-translate-y-1 cursor-pointer"
-          >
-            <span>Explore Projects</span>
-            <FiArrowRight className="text-lg transition-transform duration-300 group-hover:translate-x-1.5" />
-          </Link> */}
         </motion.div>
       </motion.div>
     </section>
