@@ -12,7 +12,7 @@ const SideViewRight = () => {
       duration: 1.4,
       ease: [0.25, 0.8, 0.25, 1],
       delay: 0.2,
-    }} className="hidden fixed bottom-0 right-12 md:flex lg:flex flex-col items-center text-[var(--text-muted-2)] bg-transparent">
+    }} className="hidden fixed bottom-0 right-6 lg:right-12 md:flex lg:flex flex-col items-center text-[var(--text-muted-2)] bg-transparent z-50">
       <a href={`mailto:${email}`}  rel="noopener noreferrer" className=' flex justify-center items-center  hover:-translate-y-[2px] duration-300 hover:text-[var(--accent)] transition-all mb-12  font-mono tracking-[0.1em] [writing-mode:vertical-rl] text-[15px] '>{email}</a>
       <div className="w-[2px] h-[90px] bg-[#a8b2d1]"></div>
     </motion.div>

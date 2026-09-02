@@ -108,8 +108,10 @@ function App() {
       <NavBar />
     </div>
     <div className="flex flex-row">
-      <div className="fixed top-[90px] left-0 h-screen w-[8%]">
-        <SideView />
+      <div className="fixed top-[90px] left-0 h-screen w-[8%] z-50 pointer-events-none">
+        <div className="pointer-events-auto">
+          <SideView />
+        </div>
       </div>
       <div className="flex-grow">
         <Center />
@@ -120,8 +122,10 @@ function App() {
         <Contact />
         <Footer />
       </div>
-      <div className="fixed top-[90px] right-0 h-screen w-[8%]">
-        <SideViewRight />
+      <div className="fixed top-[90px] right-0 h-screen w-[8%] z-50 pointer-events-none">
+        <div className="pointer-events-auto">
+          <SideViewRight />
+        </div>
       </div>
     </div>
   </div>

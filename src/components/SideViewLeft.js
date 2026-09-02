@@ -13,7 +13,7 @@ const SideViewLeft = () => {
       ease: [0.25, 0.8, 0.25, 1],
       delay: 0.2,
     }}
-    className="hidden fixed bottom-0 left-12 md:flex lg:flex flex-col items-center text-[var(--text-muted-2)] bg-transparent">
+    className="hidden fixed bottom-0 left-6 lg:left-12 md:flex lg:flex flex-col items-center text-[var(--text-muted-2)] bg-transparent z-50">
       {/* Social Media Icons */}
       <div className="flex flex-col items-center mb-4">
         {socialMedia.map(({ url, name }, index) => (

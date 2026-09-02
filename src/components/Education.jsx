@@ -15,14 +15,18 @@ import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
-    <div name="Education" className="h-auto bg-[var(--bg-primary)] flex items-center justify-center px-4 md:px-[10%] pb-20 pt-10 md:pb-20 lg:pb-28 xl:pb-36">
-      <div className="container mx-auto px-4 lg:px-16 xl:px-24">
+    <div name="Education" className="h-auto bg-[var(--bg-primary)] flex items-center justify-center px-4 md:px-[10%] pb-20 pt-10 md:pb-20 lg:pb-28 xl:pb-36 relative overflow-hidden">
+      {/* Ambient background glow circles */}
+      <div className="absolute top-1/4 -left-20 w-96 h-96 bg-[var(--accent)] opacity-[0.07] rounded-full blur-3xl pointer-events-none -z-0" />
+      <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-[var(--accent)] opacity-[0.04] rounded-full blur-3xl pointer-events-none -z-0" />
+
+      <div className="container mx-auto px-4 lg:px-16 xl:px-24 relative z-10">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-12">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.15 }}
             className="flex-1 text-[var(--text-primary)] space-y-20 relative">
             {/* Heading */}
             <div className="flex items-center font-mono text-xl md:text-2xl font-bold">
@@ -57,8 +61,8 @@ const Projects = () => {
                     key={i}
                     initial={{ opacity: 0, x: -40 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: i * 0.2 }}
-                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: i * 0.15 }}
+                    viewport={{ once: false, amount: 0.15 }}
                   >
                     <h2 className="text-2xl font-semibold text-[var(--text-primary)] hover:text-[var(--accent)]">
                       {item.title}
@@ -73,8 +77,8 @@ const Projects = () => {
                 <motion.li
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.5 }}
-                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  viewport={{ once: false, amount: 0.15 }}
                 >
                   <h2 className="mt-20 text-2xl font-semibold text-[var(--text-primary)] hover:text-[var(--accent)]">
                     Achievements & Awards

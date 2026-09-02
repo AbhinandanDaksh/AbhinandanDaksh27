@@ -34,7 +34,7 @@ const Projects = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.15 }}
               className="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-12 pb-56 sm:pb-10 md:pb-10 lg:pb-10 relative"
             >
               {/* Image Section */}
@@ -138,7 +138,7 @@ const Projects = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.15 }}
               className="flex flex-col lg:flex-row items-center gap-8 lg:gap-20 pb-48 sm:pb-10 md:pb-10 lg:pb-10 relative"
             >
               {/* Image Section */}
@@ -252,7 +252,7 @@ const Projects = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.15 }}
               className="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-12 pb-56 sm:pb-10 md:pb-10 lg:pb-10 relative"
             >
               {/* Image Section */}
@@ -351,7 +351,7 @@ const Projects = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.15 }}
               className="flex flex-col lg:flex-row items-center gap-8 lg:gap-20 pb-40 sm:pb-10 md:pb-10 lg:pb-10 relative"
             >
               {/* Image Section */}
@@ -461,7 +461,7 @@ const Projects = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.15 }}
               className="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-12 pb-56 sm:pb-10 md:pb-10 lg:pb-10 relative"
             >
               {/* Image Section */}
@@ -560,7 +560,7 @@ const Projects = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.15 }}
               className="flex justify-center pt-8 md:pt-12"
             >
               <a

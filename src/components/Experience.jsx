@@ -46,7 +46,7 @@ const experiences = [
     title: "Innovixion Tech",
     role: "Full Stack Developer",
     time: "August 2024 - November 2024",
-    link:"https://www.innovixiontech.in/",
+    link: "https://www.innovixiontech.in/",
     description: [
       {
         point:
@@ -66,7 +66,7 @@ const experiences = [
     title: "ICT Academy",
     role: "Full Stack Developer (Internship)",
     time: "August 2023 - September 2023",
-    link:"#",
+    link: "#",
     description: [
       {
         point:
@@ -90,11 +90,21 @@ const Experience = () => {
 
   // Optional safety guard (shouldn't be necessary, but best practice)
   if (!activeExp) return null;
-  const { role, title, time, description,link } = activeExp;
+  const { role, title, time, description, link } = activeExp;
 
   return (
-    <div name="Experience" className="h-auto bg-[var(--bg-primary)] flex items-center justify-center transition-colors duration-300 px-4 md:px-[10%] pb-20 pt-10 md:pb-20 lg:pb-28 xl:pb-36 text-[var(--text-primary)]">
-      <div className="w-full md:w-[60%] md:h-[60vh] h-auto">
+    <div name="Experience" className="h-auto bg-[var(--bg-primary)] flex items-center justify-center transition-colors duration-300 px-4 md:px-[10%] pb-20 pt-10 md:pb-20 lg:pb-28 xl:pb-36 text-[var(--text-primary)] relative overflow-hidden">
+      {/* Ambient background glow circles */}
+      <div className="absolute top-1/4 -left-20 w-96 h-96 bg-[var(--accent)] opacity-[0.07] rounded-full blur-3xl pointer-events-none -z-0" />
+      <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-[var(--accent)] opacity-[0.04] rounded-full blur-3xl pointer-events-none -z-0" />
+
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: false, amount: 0.15 }}
+        className="w-full md:w-[60%] md:h-[60vh] h-auto relative z-10"
+      >
         {/* Heading */}
         <div className="flex items-center font-mono text-xl md:text-2xl font-bold">
           <span className="text-[var(--accent)]">02.</span>
@@ -119,11 +129,10 @@ const Experience = () => {
                 aria-selected={active === item.id}
                 tabIndex={0}
                 className={`px-4 py-3 text-left font-mono text-sm md:text-base transition-all duration-300 border-l-2 relative overflow-hidden
-        ${
-          active === item.id
-            ? "text-[var(--accent)] border-[var(--accent)] bg-[var(--bg-secondary)] font-semibold"
-            : "text-[var(--text-muted)] border-transparent hover:text-[var(--accent)] hover:bg-[var(--bg-secondary)]/50"
-        }`}
+        ${active === item.id
+                    ? "text-[var(--accent)] border-[var(--accent)] bg-[var(--bg-secondary)] font-semibold"
+                    : "text-[var(--text-muted)] border-transparent hover:text-[var(--accent)] hover:bg-[var(--bg-secondary)]/50"
+                  }`}
               >
                 <span className="relative z-10">{item.title}</span>
                 {active === item.id && (
@@ -180,7 +189,7 @@ const Experience = () => {
             </AnimatePresence>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
